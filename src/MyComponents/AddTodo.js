@@ -1,19 +1,21 @@
 import React, {useState} from "react"
 
-export const AddTodo = (props) => {
-
+export const AddTodo = ({ addTodo }) => {
     const [title, setTitle] = useState("");
-    const [desc , setDesc] = useState("");
+    const [desc, setDesc] = useState("");
     
 
 
-    const submit = (e) =>
-    {
+    const submit = (e) => {
         e.preventDefault();
-        if (!title || !desc){
-            alert("Please enter All values :");
+        if (!title || !desc) {
+            alert("Title or Description cannot be blank");
         }
-        props.addTodo(title,desc);
+        else {
+            addTodo(title, desc);
+            setTitle("");
+            setDesc("");
+        }
     }
 
     return (
