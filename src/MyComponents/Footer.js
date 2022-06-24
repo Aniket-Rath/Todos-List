@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footer = () => {
+export const Footer = () => {
 
   let footerStyle ={
     position: "absolute",
@@ -9,12 +9,11 @@ const Footer = () => {
   }
  
   return (
-    <Footer className="bg-dark text-light py-3" style={footerStyle}>
+    <footer className="bg-dark text-light py-3" style={footerStyle}>
       <p className="text-center">
         Copyright &copy; Aniket_rath
       </p>
-    </Footer>
+    </footer>
   )
 }
 
-export default Footer;
