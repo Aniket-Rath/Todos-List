@@ -49,6 +49,4 @@ Header.defaultProps =
 Header.propTypes = 
 {
     title: PropTypes.string,
-    search: PropTypes.bool.isRequired,
-
 }
